@@ -4,4 +4,75 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #FECA1B;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #EF5350;
+  padding: 1rem;
+}
+.header__titulo {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.main {
+  flex: 1;
+  padding: clamp(2rem, 1.3043rem + 3.4783vw, 4rem) clamp(2rem, -1.4783rem + 17.3913vw, 12rem);
+}
+.main .cards-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+@media (max-width: 1024px) {
+  .main .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .main .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.main .card {
+  background-color: #3761A8;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.main .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.main .card__imagen {
+  width: 75%;
+  height: auto;
+}
+.main .card__nombre {
+  font-size: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+  padding: 0.5rem 0;
+  margin-bottom: 1.25rem;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.footer {
+  background-color: #EF5350;
+  padding: 1rem;
+  text-align: center;
+}
+.footer__texto {
+  font-size: 0.75rem;
+  color: #fff;
+}
+
 /*# sourceMappingURL=styles.css.map */
